@@ -1,9 +1,13 @@
-function clickHome(){
-    document.getElementById('home').classList.add('active');
-    let a = document.querySelectorAll('#sidebar-menu>li>a');
-    a.forEach((val)=>console.log(val.classList));
+const x= document.querySelectorAll('.sidebar-btn');
 
-console.log(a)
+const clicknav = (obj) =>{
+    side=document.querySelectorAll('#sidebar-menu li a');
+    side.forEach(element => {
+        console.log(element);
+        element.classList.remove('active');
+    });
+    // console.log(side)
+    // console.log(obj.getAttribute('id'));
+    id = obj.getAttribute('id');
+    document.getElementById(id).classList.add('active');
 }
-
-
